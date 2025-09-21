@@ -1,3 +1,6 @@
+  "engines": {
+    "node": "18.x"
+  },
 {
   "name": "vite_react_shadcn_ts",
   "private": true,
@@ -5,7 +8,6 @@
   "type": "module",
   "scripts": {
     "dev": "vite",
-  "build": "vite build --force",
     "build:dev": "vite build --mode development",
     "lint": "eslint .",
     "preview": "vite preview"
