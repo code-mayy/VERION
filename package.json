@@ -11,6 +11,9 @@
     "build:dev": "vite build --mode development",
     "lint": "eslint .",
     "preview": "vite preview"
+    "postinstall": "vite --version",
+    "build": "npx vite build",
+    "build": "vite build --force"
   },
   "dependencies": {
     "@google-cloud/local-auth": "^3.0.1",
