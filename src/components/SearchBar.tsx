@@ -9,7 +9,7 @@ interface SearchBarProps {
 }
 function SearchBar({ 
   onSearch, 
-  placeholder = "Ask ElevenDocs or upload...",
+  placeholder = "Ask Verion or upload...",
   className = ""
 }: SearchBarProps) {
     const [query, setQuery] = useState("");

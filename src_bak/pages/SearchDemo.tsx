@@ -1,4 +1,4 @@
-import { ProgrammaticSearchBar } from "@/components/ProgrammaticSearchBar";
+
 
 const SearchDemo = () => {
   const handleSearch = (query: string, files?: File[], result?: string) => {
@@ -35,13 +35,7 @@ const SearchDemo = () => {
         AI-powered legal document analysis at your fingertips
       </p>
 
-      <div style={{ width: '100%', maxWidth: '750px' }}>
-        <ProgrammaticSearchBar 
-          onSearch={handleSearch}
-          placeholder="Ask ElevenDocs or upload..."
-          apiEndpoint="http://127.0.0.1:8002/invoke"
-        />
-      </div>
+      {/* Search bar removed as requested */}
 
       <p style={{ marginTop: '20px', color: '#888', fontSize: '14px', textAlign: 'left' }}>
         ElevenDocs can analyze legal documents. Always consult with a qualified attorney for legal advice.

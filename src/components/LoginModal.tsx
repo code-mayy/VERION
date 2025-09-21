@@ -94,7 +94,7 @@ export const LoginModal: React.FC<LoginModalProps> = ({ isOpen, onClose, onSucce
             <span className="text-primary-foreground font-bold text-2xl">11D</span>
           </div>
           <h1 className="text-3xl font-bold text-gray-900 dark:text-white mb-2">
-            Welcome to ElevenDocs
+            Welcome to Verion
           </h1>
           <p className="text-gray-600 dark:text-gray-400">
             Sign in with Google to access AI-powered legal document analysis

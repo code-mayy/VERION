@@ -23,7 +23,7 @@ export const Sidebar = ({ onLogout, onNewChat }: SidebarProps) => {
           className="w-full bg-primary hover:bg-primary-hover text-primary-foreground flex items-center gap-2 transition-colors"
         >
           <Plus size={16} />
-          New Chat
+          {/* Only one recent chat per account */}
         </Button>
       </div>
 

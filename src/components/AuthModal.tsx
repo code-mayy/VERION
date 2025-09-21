@@ -85,7 +85,7 @@ export const AuthModal = ({ isOpen, onClose, onSuccess }: AuthModalProps) => {
           </DialogTitle>
           <p className="text-center text-muted-foreground">
             {isSignUp 
-              ? "Join ElevenDocs to start analyzing documents" 
+              ? "Join Verion to start analyzing documents" 
               : "Sign in to continue your legal analysis"
             }
           </p>

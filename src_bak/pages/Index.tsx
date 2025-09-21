@@ -1,7 +1,7 @@
 import LandingPage from "@/components/LandingPage";
 import { AuthForm } from "@/components/AuthForm";
 import { useAuth } from "@/contexts/AuthContext";
-import SearchBar from "../components/SearchBar";
+
 
 const Index = () => {
   const { user, isAuthenticated, loading } = useAuth();

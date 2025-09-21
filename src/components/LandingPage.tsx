@@ -5,7 +5,7 @@ import { Input } from "@/components/ui/input";
 import { Textarea } from "@/components/ui/textarea";
 import { UserMenu } from "./UserMenu";
 import { AnimatedMessageBubble } from "./AnimatedMessageBubble";
-import { ElevenDocsSidebar } from "./ElevenDocsSidebar";
+import { ElevenDocsSidebar as VerionSidebar } from "./ElevenDocsSidebar";
 import { ChatGPTInput } from "./ChatGPTInput";
 import { useAuth } from "@/contexts/AuthContext";
 
@@ -42,7 +42,7 @@ export const LandingPage = ({ onStartChat, isAuthenticated, onLogout }: LandingP
   const [messages, setMessages] = useState<Message[]>([
     {
       id: 1,
-      text: "Hello! I'm ElevenDocs, your AI legal assistant. I can help you analyze, summarize, and understand legal documents. How can I assist you today?",
+  text: "Hello! I'm Verion, your AI legal assistant. I can help you analyze, summarize, and understand legal documents. How can I assist you today?",
       isUser: false,
       timestamp: "Just now",
       isTyping: false,
@@ -206,7 +206,7 @@ export const LandingPage = ({ onStartChat, isAuthenticated, onLogout }: LandingP
   const handleNewChat = () => {
     setMessages([{
       id: 1,
-      text: "Hello! I'm ElevenDocs, your AI legal assistant. I can help you analyze, summarize, and understand legal documents. How can I assist you today?",
+  text: "Hello! I'm Verion, your AI legal assistant. I can help you analyze, summarize, and understand legal documents. How can I assist you today?",
       isUser: false,
       timestamp: "Just now",
       isTyping: false,
@@ -249,7 +249,7 @@ export const LandingPage = ({ onStartChat, isAuthenticated, onLogout }: LandingP
       <div className={`fixed inset-y-0 left-0 z-50 w-64 sidebar-container sidebar-transition ${
         sidebarOpen ? 'translate-x-0' : '-translate-x-full'
       }`}>
-        <ElevenDocsSidebar 
+  <VerionSidebar 
           onLogout={logout} 
           onNewChat={handleNewChat}
         />
@@ -264,9 +264,7 @@ export const LandingPage = ({ onStartChat, isAuthenticated, onLogout }: LandingP
       )}
       
       {/* Main Content */}
-      <div className={`flex-1 flex flex-col main-content-transition ${
-        sidebarOpen ? 'ml-64' : 'ml-0'
-      }`}>
+      <div className={`flex-1 flex flex-col main-content-transition ${sidebarOpen ? 'ml-64' : 'ml-0'}`}> 
         {/* Menu Bar Only (no banner, no extra header) */}
         <div className="p-4">
           <Button
@@ -290,7 +288,7 @@ export const LandingPage = ({ onStartChat, isAuthenticated, onLogout }: LandingP
               <div className="w-full max-w-2xl text-center space-y-8 flex flex-col items-center justify-center">
                 <div className="space-y-4">
                   <h2 className="text-4xl md:text-5xl font-bold text-foreground">
-                    Welcome to ElevenDocs
+                    Welcome to Verion
                   </h2>
                   <p className="text-lg text-muted-foreground font-semibold">
                     AI-powered legal document analysis at your fingertips
@@ -328,22 +326,33 @@ export const LandingPage = ({ onStartChat, isAuthenticated, onLogout }: LandingP
                 
                 {/* Clean Search Bar */}
                 <div className="flex flex-col items-center mt-8">
-                  <form onSubmit={handleSubmit} className="w-full max-w-4xl">
+                  <form onSubmit={handleSubmit} className="w-full max-w-6xl">
                     <div className="relative">
-                      <div className="gemini-search-container flex items-center rounded-full border border-gray-300 bg-white shadow-lg hover:shadow-xl transition-all duration-300 focus-within:shadow-2xl focus-within:border-blue-500">
-                        <Input
+                      <div className="flex items-center rounded-full border border-gray-300 bg-white shadow-lg" style={{ width: '100%' }}>
+                        <input
                           value={query}
                           onChange={(e) => setQuery(e.target.value)}
-                          placeholder="Ask ElevenDocs or upload files..."
-                          className="flex-1 h-14 px-6 text-lg bg-transparent border-0 focus:ring-0 focus:outline-none placeholder:text-gray-500 text-gray-900"
+                          placeholder="Ask Verion or upload files..."
+                          className="flex-1 h-14 px-6 text-lg bg-transparent border-0 outline-none placeholder:text-gray-500 text-gray-900"
+                          style={{ minWidth: '600px', background: 'transparent', border: 'none', outline: 'none', boxShadow: 'none' }}
                         />
-                        <div className="flex items-center pr-4">
+                        <div className="flex items-center pr-4 gap-2">
+                          <Button
+                            type="submit"
+                            size="sm"
+                            variant="ghost"
+                            className="h-8 w-8 p-0 rounded-full text-blue-500 hover:text-blue-700"
+                            title="Send"
+                            disabled={!query.trim()}
+                          >
+                            <Send size={20} />
+                          </Button>
                           <Button
                             type="button"
                             size="sm"
                             variant="ghost"
                             onClick={triggerFileInput}
-                            className="h-8 w-8 p-0 rounded-full hover:bg-gray-100 text-gray-500 hover:text-gray-700"
+                            className="h-8 w-8 p-0 rounded-full text-gray-500 hover:text-gray-700"
                             title="Attach file"
                           >
                             <Paperclip size={20} />

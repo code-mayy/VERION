@@ -92,7 +92,7 @@ export const ChatGPTInput = ({
               onKeyPress={onKeyPress}
               onFocus={() => setIsFocused(true)}
               onBlur={() => setIsFocused(false)}
-              placeholder="Ask ElevenDocs about your legal document..."
+              placeholder="Ask Verion about your legal document..."
               className="chatgpt-textarea"
               rows={1}
               disabled={isTyping || isUploading}
@@ -135,7 +135,7 @@ export const ChatGPTInput = ({
 
         {/* Disclaimer */}
         <p className="text-xs text-muted-foreground text-center mt-3">
-          ElevenDocs can analyze legal documents. Always consult with a qualified attorney for legal advice.
+          Verion can analyze legal documents. Always consult with a qualified attorney for legal advice.
         </p>
       </div>
     </div>

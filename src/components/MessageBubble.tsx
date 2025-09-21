@@ -64,7 +64,7 @@ export const TypingIndicator = () => {
             <span className="w-2 h-2 bg-muted-foreground rounded-full"></span>
             <span className="w-2 h-2 bg-muted-foreground rounded-full"></span>
           </div>
-          <span className="text-sm text-muted-foreground">ElevenDocs is analyzing...</span>
+          <span className="text-sm text-muted-foreground">Verion is analyzing...</span>
         </div>
       </div>
     </div>

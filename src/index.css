@@ -6,7 +6,7 @@
 
 @layer base {
   :root {
-    /* ElevenDocs Dark Theme - Gemini Inspired */
+  /* Verion Dark Theme - Gemini Inspired */
     --background: 213 27% 7%;
     --foreground: 213 31% 91%;
     
@@ -411,7 +411,7 @@ body {
     overflow: hidden;
   }
 
-  /* ElevenDocs Search Bar Styles - Dark Theme with Left Alignment */
+  /* Verion Search Bar Styles - Dark Theme with Left Alignment */
   .search-container {
     display: flex;
     align-items: center;

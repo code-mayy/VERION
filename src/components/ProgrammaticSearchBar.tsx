@@ -10,7 +10,7 @@ interface ProgrammaticSearchBarProps {
 
 export const ProgrammaticSearchBar = ({ 
   onSearch,
-  placeholder = "Ask ElevenDocs or upload...",
+  placeholder = "Ask Verion or upload...",
   className = "",
   apiEndpoint = "http://127.0.0.1:8002/invoke"
 }: ProgrammaticSearchBarProps) => {

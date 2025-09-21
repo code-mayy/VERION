@@ -137,7 +137,7 @@ export const FormattedBotText = ({ text, isTyping, isTypewriterActive, shouldSho
             />
           ))}
         </div>
-        <span className="text-base text-gray-300">ElevenDocs is analyzing...</span>
+  <span className="text-base text-gray-300">Verion is analyzing...</span>
       </div>
     );
   }

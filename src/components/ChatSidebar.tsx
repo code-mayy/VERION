@@ -39,7 +39,7 @@ export default function ChatSidebar({
 
   return (
     <aside style={{ width: 250, borderRight: "1px solid #eee", height: "100vh", overflowY: "auto" }}>
-      <button onClick={() => onSelect("new")} style={{ width: "100%", margin: "8px 0" }}>+ New Chat</button>
+  {/* Only one recent chat per account, no new chat button */}
       {conversations.map((conv) => (
         <div
           key={conv.id}

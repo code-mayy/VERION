@@ -8,10 +8,7 @@ interface ElevenDocsSidebarProps {
 
 export const ElevenDocsSidebar = ({ onLogout, onNewChat }: ElevenDocsSidebarProps) => {
   const chatHistory = [
-    { id: 1, title: "Rental Agreement Analysis", time: "2 hours ago", type: "rental" },
-    { id: 2, title: "Employment Contract Review", time: "Yesterday", type: "contract" },
-    { id: 3, title: "Terms of Service Summary", time: "2 days ago", type: "terms" },
-    { id: 4, title: "Privacy Policy Highlights", time: "1 week ago", type: "privacy" },
+  // Only one recent chat per account
   ];
 
   return (
