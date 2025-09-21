@@ -1,18 +1,16 @@
-import { useAuth } from '@/contexts/AuthContext';
+// import { useAuth } from '@/contexts/AuthContext';
 
 // API configuration
-const API_BASE_URL = import.meta.env.VITE_API_URL || 'http://localhost:5000';
+const API_BASE_URL = import.meta.env.VITE_API_URL || 'http://127.0.0.1:8002';
 
 export const useApi = () => {
-  const { idToken, logout } = useAuth();
+
 
   const makeRequest = async (
     endpoint: string,
     options: RequestInit = {}
   ) => {
-    if (!idToken) {
-      throw new Error('No authentication token available');
-    }
+
 
     const url = `${API_BASE_URL}${endpoint}`;
     
@@ -20,7 +18,6 @@ export const useApi = () => {
       ...options,
       headers: {
         'Content-Type': 'application/json',
-        'Authorization': `Bearer ${idToken}`,
         ...options.headers,
       },
     };
@@ -28,11 +25,7 @@ export const useApi = () => {
     try {
       const response = await fetch(url, config);
       
-      if (response.status === 401) {
-        // Token expired or invalid
-        logout();
-        throw new Error('Authentication failed. Please sign in again.');
-      }
+
       
       if (!response.ok) {
         const errorData = await response.json().catch(() => ({}));
